@@ -101,7 +101,7 @@ contact = dbc.Row(
         dbc.Col(html.A(
             html.Img(src='/assets/images/github.png',className='img',
              id='github'),
-            href='https://github.com/anshuls235'
+            href='https://github.com/JohanBekker'
             )),
         #dbc.Col(
         #    dbc.Button(
