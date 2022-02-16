@@ -22,6 +22,7 @@ load_figure_template("lux")
 url_theme1 = dbc.themes.LUX
 
 app = dash.Dash(__name__, plugins=[dl.plugins.pages], external_stylesheets=[url_theme1])
+server=app.server
 
 def last_date_per_column(df):
     columns_dict = {'besmettingen': 'Total_reported', 'ziekenhuis': 'Hospital_admission',
