@@ -24,11 +24,9 @@ url_theme1 = dbc.themes.LUX
 app = dash.Dash(__name__, plugins=[dl.plugins.pages], external_stylesheets=[url_theme1])
 
 def last_date_per_column(df):
-    
     columns_dict = {'besmettingen': 'Total_reported', 'ziekenhuis': 'Hospital_admission',
             'ic': 'IC_admission', 'overleden': 'Deceased'}
     index_dict = {}
-    
     for key in columns_dict.keys():
         search = 1
         index = -1
@@ -38,9 +36,6 @@ def last_date_per_column(df):
             else:
                 index_dict[key] = index
                 search = 0
-    
-    
-    
     return index_dict
 
 filepath = './files/final_df.csv'
@@ -52,7 +47,6 @@ time_since_update = time.time()
 columns_dict = {'besmettingen': 'Total_reported', 'ziekenhuis': 'Hospital_admission',
         'ic': 'IC_admission', 'overleden': 'Deceased'}
 
-
 def Card_generator(column, data, date_dict):
     #Generate the cards in the navigation bar on the left side
     
@@ -60,8 +54,6 @@ def Card_generator(column, data, date_dict):
                  'ic': 'IC Opnames', 'overleden': 'Overleden'}
     data_dict = {'besmettingen': 'Total_reported', 'ziekenhuis': 'Hospital_admission',
                  'ic': 'IC_admission', 'overleden': 'Deceased'}
-
-    
     index = date_dict[column]
     aantal = data[data_dict[column]].iat[index]
     date = data.Date_of_statistics.iat[index]
@@ -81,7 +73,6 @@ def Card_generator(column, data, date_dict):
         ),
     ]
     return card_content
-
 
 # Create contact icons in the header top right
 contact = dbc.Row(
