@@ -111,18 +111,18 @@ layout = html.Div(
                  ),
                  dbc.CardBody([
                      dbc.Row([
-                     dbc.Col(dbc.Card([dbc.CardBody(dcc.Graph(id='nederland-graph', style={'height': '100%'}))], className="card border-primary mb-3", style={"height": "65vh"}), 
+                     dbc.Col(dbc.Card([dbc.CardBody(dcc.Graph(id='nederland-graph', style={'height': '100%'}, config={"responsive":True}))], className="card border-primary mb-3", style={"height": "65vh"}), 
                                      id="card-content", className="card-text", 
                                      width={'size': 6,  "offset": 0, "height": "100vh"}),
-                     dbc.Col(dbc.Card([dbc.CardBody(dcc.Graph(id='nederland-graph2', style={'height': '100%'}))], className="card border-primary mb-3", style={"height": "65vh"}),
+                     dbc.Col(dbc.Card([dbc.CardBody(dcc.Graph(id='nederland-graph2', style={'height': '100%'}, config={"responsive":True}))], className="card border-primary mb-3", style={"height": "65vh"}),
                                      id="card-content2", className="card-text",
                                      width={'size': 6,  "offset": 0, "height": "100vh"}),
                      ]),
                      dbc.Row([
-                     dbc.Col(dbc.Card([dbc.CardBody(dcc.Graph(id='nederland-graph3', style={"height": "100%"}))], className="card border-primary mb-3", style={"height": "65vh"}), 
+                     dbc.Col(dbc.Card([dbc.CardBody(dcc.Graph(id='nederland-graph3', style={"height": "100%"}, config={"responsive":True}))], className="card border-primary mb-3", style={"height": "65vh"}), 
                                      id="card-content3", className="card-text", 
                                      width={'size': 6,  "offset": 0}),
-                     dbc.Col(dbc.Card([dbc.CardBody(dcc.Graph(id='nederland-graph4', style={"height": "100%"}))], className="card border-primary mb-3", style={"height": "65vh"}),
+                     dbc.Col(dbc.Card([dbc.CardBody(dcc.Graph(id='nederland-graph4', style={"height": "100%"}, config={"responsive":True}))], className="card border-primary mb-3", style={"height": "65vh"}),
                                      id="card-content4", className="card-text",
                                      width={'size': 6,  "offset": 0}),
                      ]),

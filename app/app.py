@@ -25,9 +25,11 @@ app = dash.Dash(__name__, plugins=[dl.plugins.pages], external_stylesheets=[url_
 server=app.server
 
 def last_date_per_column(df):
+    
     columns_dict = {'besmettingen': 'Total_reported', 'ziekenhuis': 'Hospital_admission',
             'ic': 'IC_admission', 'overleden': 'Deceased'}
     index_dict = {}
+    
     for key in columns_dict.keys():
         search = 1
         index = -1
@@ -37,6 +39,7 @@ def last_date_per_column(df):
             else:
                 index_dict[key] = index
                 search = 0
+
     return index_dict
 
 filepath = './files/final_df.csv'
@@ -48,6 +51,7 @@ time_since_update = time.time()
 columns_dict = {'besmettingen': 'Total_reported', 'ziekenhuis': 'Hospital_admission',
         'ic': 'IC_admission', 'overleden': 'Deceased'}
 
+
 def Card_generator(column, data, date_dict):
     #Generate the cards in the navigation bar on the left side
     
@@ -55,6 +59,8 @@ def Card_generator(column, data, date_dict):
                  'ic': 'IC Opnames', 'overleden': 'Overleden'}
     data_dict = {'besmettingen': 'Total_reported', 'ziekenhuis': 'Hospital_admission',
                  'ic': 'IC_admission', 'overleden': 'Deceased'}
+
+    
     index = date_dict[column]
     aantal = data[data_dict[column]].iat[index]
     date = data.Date_of_statistics.iat[index]
@@ -74,6 +80,7 @@ def Card_generator(column, data, date_dict):
         ),
     ]
     return card_content
+
 
 # Create contact icons in the header top right
 contact = dbc.Row(
@@ -173,16 +180,16 @@ sidebar = html.Div(
                 #),
                 
                 dbc.Card(Card_generator('besmettingen', df_data, last_date_dict), 
-                                 color="success", inverse=True),
+                                 color="success", inverse=True, id="besmettingen-card"),
                 html.Hr(),
                 dbc.Card(Card_generator('ziekenhuis', df_data, last_date_dict), 
-                                 color="info", inverse=True),
+                                 color="info", inverse=True, id="ziekenhuis-card"),
                 html.Hr(),
                 dbc.Card(Card_generator('ic', df_data, last_date_dict), 
-                                 color="warning", inverse=True),
+                                 color="warning", inverse=True, id="ic-card"),
                 html.Hr(),
                 dbc.Card(Card_generator('overleden', df_data, last_date_dict), 
-                                 color="danger", inverse=True),
+                                 color="danger", inverse=True, id="overleden-card"),
             ],
             vertical=True,
             pills=True, 
@@ -200,21 +207,28 @@ app.layout = dbc.Container([
                 dbc.Col(dl.plugins.page_container, width={'size': 10,  "offset": 0},  className="g-0"),
                 ]),
         dcc.Interval(id='interval1', interval=3600 * 1000, n_intervals=0),
-        html.Div(id='placeholder', style={'display':'none'}),
+        #html.Div(id='placeholder', style={'display':'none'}),
 
 ], fluid=True)
 
-@app.callback(Output('placeholder', 'children'),
-    Input('interval1', 'n_intervals')
-    )
+@app.callback([Output('besmettingen-card', 'children'),
+               Output('ziekenhuis-card', 'children'),
+               Output('ic-card', 'children'),
+               Output('overleden-card', 'children')],
+               Input('interval1', 'n_intervals'))
 def update_cards(n):
-    
+    print('Update Cards')
     global df_data, last_date_dict
     
     df_data  = pd.read_csv(filepath, sep=',')
     last_date_dict = last_date_per_column(df_data)
     
-    return {}
+    content1 = Card_generator('besmettingen', df_data, last_date_dict)
+    content2 = Card_generator('ziekenhuis', df_data, last_date_dict)
+    content3 = Card_generator('ic', df_data, last_date_dict)
+    content4 = Card_generator('overleden', df_data, last_date_dict)
+    
+    return content1, content2, content3, content4
 
 if __name__ == "__main__":
     app.run_server(debug=True, host='0.0.0.0')
