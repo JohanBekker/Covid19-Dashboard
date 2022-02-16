@@ -1,0 +1,1 @@
+A Covid19 dashboard displaying live data for the Netherlands, made with Dash Plotly.
