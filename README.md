@@ -36,8 +36,14 @@ This should be done in app.py, covidcijfers.py, vaccinatiecijfers.py and dataset
 For now the web application is launched on Heroku by manually creating the images with the docker-compose.yml file. In the future
 each push to the github main branch will automatically redeploy the update application by using the heroku.yml file.
 
-To push and release the created images to Heroku, make sure to have the Heroku Cli installed. Perform the following commands in the
-command window one by one.
+To push and release the created images to Heroku, make sure to have the Heroku Cli installed. You also need to set the 
+stack type of your application to container with the following command
+
+```bash
+heroku stack:set container
+```
+
+Perform the following commands in the command window one by one.
 
 ```bash
 heroku login
@@ -46,15 +52,17 @@ heroku container:login
 ***find image id's***
 docker image ls
 
-docker tag image_id1 registry.heroku.com/covid19dashnetherlands/worker
-docker push registry.heroku.com/covid19dashnetherlands/worker
+docker tag <image_id1> registry.heroku.com/<your app name>/worker
+docker push registry.heroku.com/<your app name>/worker
 
-docker tag image_id2 registry.heroku.com/covid19dashnetherlands/web
-docker push registry.heroku.com/covid19dashnetherlands/web
+docker tag <image_id2> registry.heroku.com/<your app name>/web
+docker push registry.heroku.com/<your app name>/web
 
-heroku container:release worker --app covid19dashnetherlands
-heroku container:release web --app covid19dashnetherlands
+heroku container:release worker --app <your app name>
+heroku container:release web --app <your app name>
 ```
+
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
