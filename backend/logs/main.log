@@ -123,3 +123,66 @@
 2022-02-16 03:00:19,113:INFO:Job "get_data (trigger: cron[year='*', month='*', day='*', hour='4', minute='0'], next run at: 2022-02-17 04:00:00 CET)" executed successfully
 2022-02-16 15:00:00,102:INFO:Running job "get_data (trigger: cron[year='*', month='*', day='*', hour='16', minute='0'], next run at: 2022-02-17 16:00:00 CET)" (scheduled at 2022-02-16 16:00:00+01:00)
 2022-02-16 15:00:19,715:INFO:Job "get_data (trigger: cron[year='*', month='*', day='*', hour='16', minute='0'], next run at: 2022-02-17 16:00:00 CET)" executed successfully
+2022-02-17 11:45:09,264:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-17 11:45:09,265:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-17 11:45:09,268:INFO:Added job "get_data" to job store "default"
+2022-02-17 11:45:09,269:INFO:Added job "get_data" to job store "default"
+2022-02-17 11:45:09,270:INFO:Scheduler started
+2022-02-17 12:07:51,016:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-17 12:07:51,017:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-17 12:07:51,020:INFO:Added job "get_data" to job store "default"
+2022-02-17 12:07:51,021:INFO:Added job "get_data" to job store "default"
+2022-02-17 12:07:51,021:INFO:Scheduler started
+2022-02-17 15:06:14,111:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-17 15:06:14,112:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-17 15:06:14,115:INFO:Added job "get_data" to job store "default"
+2022-02-17 15:06:14,116:INFO:Added job "get_data" to job store "default"
+2022-02-17 15:06:14,116:INFO:Scheduler started
+2022-02-18 12:22:25,661:WARNING:Run time of job "get_data (trigger: cron[year='*', month='*', day='*', hour='4', minute='0'], next run at: 2022-02-18 04:00:00 CET)" was missed by 9:22:25.661260
+2022-02-18 13:48:18,595:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 13:48:18,597:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 13:48:18,599:INFO:Added job "get_data" to job store "default"
+2022-02-18 13:48:18,601:INFO:Added job "get_data" to job store "default"
+2022-02-18 13:48:18,601:INFO:Scheduler started
+2022-02-18 14:04:21,314:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 14:04:21,315:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 14:04:21,316:INFO:Added job "get_data" to job store "default"
+2022-02-18 14:04:21,317:INFO:Added job "get_data" to job store "default"
+2022-02-18 14:04:21,317:INFO:Scheduler started
+2022-02-18 14:30:04,518:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 14:30:04,519:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 14:30:04,523:INFO:Added job "get_data" to job store "default"
+2022-02-18 14:30:04,523:INFO:Added job "get_data" to job store "default"
+2022-02-18 14:30:04,524:INFO:Scheduler started
+2022-02-18 14:33:48,791:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 14:33:48,792:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 14:33:48,794:INFO:Added job "get_data" to job store "default"
+2022-02-18 14:33:48,795:INFO:Added job "get_data" to job store "default"
+2022-02-18 14:33:48,796:INFO:Scheduler started
+2022-02-18 14:55:57,811:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 14:55:57,812:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 14:55:57,815:INFO:Added job "get_data" to job store "default"
+2022-02-18 14:55:57,816:INFO:Added job "get_data" to job store "default"
+2022-02-18 14:55:57,816:INFO:Scheduler started
+2022-02-18 15:00:00,003:INFO:Running job "get_data (trigger: cron[year='*', month='*', day='*', hour='16', minute='0'], next run at: 2022-02-18 16:00:00 CET)" (scheduled at 2022-02-18 16:00:00+01:00)
+2022-02-18 15:00:23,853:INFO:Job "get_data (trigger: cron[year='*', month='*', day='*', hour='16', minute='0'], next run at: 2022-02-19 16:00:00 CET)" executed successfully
+2022-02-18 15:05:14,986:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 15:05:14,987:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 15:05:14,990:INFO:Added job "get_data" to job store "default"
+2022-02-18 15:05:14,991:INFO:Added job "get_data" to job store "default"
+2022-02-18 15:05:14,991:INFO:Scheduler started
+2022-02-18 15:24:38,263:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 15:24:38,265:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 15:24:38,301:INFO:Added job "get_data" to job store "default"
+2022-02-18 15:24:38,302:INFO:Added job "get_data" to job store "default"
+2022-02-18 15:24:38,303:INFO:Scheduler started
+2022-02-18 15:38:49,602:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 15:38:49,603:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 15:38:49,604:INFO:Added job "get_data" to job store "default"
+2022-02-18 15:38:49,605:INFO:Added job "get_data" to job store "default"
+2022-02-18 15:38:49,605:INFO:Scheduler started
+2022-02-18 15:40:45,709:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 15:40:45,711:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2022-02-18 15:40:45,712:INFO:Added job "get_data" to job store "default"
+2022-02-18 15:40:45,713:INFO:Added job "get_data" to job store "default"
+2022-02-18 15:40:45,714:INFO:Scheduler started

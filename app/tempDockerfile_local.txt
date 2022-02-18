@@ -6,12 +6,12 @@ RUN apt-get update \
   && apt-get -y install libpq-dev gcc \
   && pip install psycopg2
 
-COPY ./requirements.txt /data/requirements.txt
+COPY ./requirements.txt /app/requirements.txt
 
-WORKDIR /data
+WORKDIR /app
 
 RUN python3 -m pip install -r requirements.txt
 
-COPY . /data
+COPY . /app
 
-CMD ["python3", "-u", "main.py"]
+CMD ["python3", "app.py"]

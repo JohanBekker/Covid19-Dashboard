@@ -6,21 +6,21 @@ Created on Mon Feb 14 16:47:49 2022
 """
 
 
+import dash_bootstrap_components as dbc
+from dash import dcc, html
 import dash
 
 dash.register_page(__name__)
 
-from dash import dcc, html
-import dash_bootstrap_components as dbc
 
 layout = html.Div(
     [
-     #dbc.Col(
-         dbc.Card(
-             [
-                 dbc.CardBody([
-                     dcc.Markdown(
-            f"""
+        # dbc.Col(
+        dbc.Card(
+            [
+                dbc.CardBody([
+                    dcc.Markdown(
+                        f"""
             -----
             ####  Data vekregen van het RIVM
             -----
@@ -38,7 +38,7 @@ layout = html.Div(
             &nbsp;
 
             """
-        ),
+                    ),
                     html.Br(),
 
                     dcc.Markdown(
@@ -51,11 +51,11 @@ layout = html.Div(
 
 
                         """
-                        
-                        ),
-                         
-                     ])
 
-             ], style={"height": "150vh", "outline": "#2C3E50"},
-         )
-     ])
+                    ),
+
+                ])
+
+            ], style={"height": "150vh", "outline": "#2C3E50"},
+        )
+    ])

@@ -2,7 +2,9 @@ FROM ubuntu:latest
 
 RUN apt-get update \
   && apt-get install -y python3-pip python3-dev \
-  && pip3 install --upgrade pip 
+  && pip3 install --upgrade pip \
+  && apt-get -y install libpq-dev gcc \
+  && pip install psycopg2
 
 COPY ./requirements.txt /app/requirements.txt
 
@@ -12,4 +14,4 @@ RUN python3 -m pip install -r requirements.txt
 
 COPY . /app
 
-CMD ["python3", "app.py"]
+CMD gunicorn --bind 0.0.0.0:$PORT app:server
