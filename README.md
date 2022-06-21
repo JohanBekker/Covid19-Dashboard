@@ -1,6 +1,6 @@
 
 # Covid19 Dashboard Netherlands
-A Covid19 dashboard displaying live data for the Netherlands, made with Dash Plotly.
+A [Covid19 dashboard](http://covid19dashnetherlands.herokuapp.com/) displaying live data for the Netherlands, made with Dash Plotly.
 
 ## Usage
 
